@@ -1,0 +1,12 @@
+<div ng-if="!infoCtrl.info" class="container">
+  <h2>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h2>
+</div>
+<div ng-if="infoCtrl.info" class="container">
+  <button class="btn btn-primary" ng-click="infoCtrl.signout()">Sign Out</button>
+  <p>First Name : {{infoCtrl.info.firstname}}</p>
+  <p>Last Name : {{infoCtrl.info.lastname}}</p>
+  <p>Email address : {{infoCtrl.info.email}}</p>
+  <p>Phone number : {{infoCtrl.info.phone}}</p>
+  <p>Favorite Dish: </p>
+  <menu-item menu-item="infoCtrl.item"> </menu-item>
+</div>
