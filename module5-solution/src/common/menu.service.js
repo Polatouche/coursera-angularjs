@@ -28,6 +28,7 @@ function MenuService($http, ApiPath) {
   };
   
   service.getMenuItem = function (shortName){
+    // returns a promise
     //console.log('getMenuItem search for ',shortName);
     return $http.get(ApiPath + '/menu_items/'+shortName+'.json').then(
       function (response) {
